@@ -1,4 +1,4 @@
-# text-to-voice
+# text-to-speech
 
 Small local text-to-speech app using the Coqui VCTK voice set.
 
