@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text to Voice</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <h1>Turn typed text into speech.</h1>
+      <p class="intro">Choose a voice, enter text, and generate spoken audio with one submit.</p>
+    </section>
+
+    <section class="panel">
+      <form id="tts-form" class="tts-form">
+        <label class="field">
+          <span>Voice</span>
+          <select id="voice-select" name="voice" required></select>
+        </label>
+
+        <label class="field">
+          <span>Text</span>
+          <textarea id="text-input" name="text" rows="7" maxlength="1200" placeholder="Type what you want the voice to say." required></textarea>
+        </label>
+
+        <div class="form-row">
+          <p id="status" class="status" aria-live="polite">Loading voices…</p>
+          <button id="submit-button" type="submit">Speak</button>
+        </div>
+      </form>
+
+      <section class="output">
+        <div class="output-head">
+          <h2>Playback</h2>
+          <button id="download-button" type="button" hidden>Download WAV</button>
+        </div>
+        <audio id="audio-player" controls preload="none"></audio>
+      </section>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
